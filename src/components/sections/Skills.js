@@ -7,277 +7,183 @@ const Slice = () => (
   </div>
 );
 
+const ListItem = ({ item }) => (
+  <li className="border-line-h">
+    <div className="name">{item.name}</div>
+    <div className="progress">
+      <div className="percentage" style={{ width: item.percentage }} />
+    </div>
+  </li>
+)
+
+const CircularListItem = ({ item }) => (
+  <li>
+    <div className="name">{item.name}</div>
+    <div className={`progress p${item.percentage}`}>
+      <span>{item.percentage}%</span>{" "}
+      <div className="slice">
+        <div className="bar" />
+        <div className="fill" />
+      </div>
+    </div>
+  </li>
+)
+
+const NameListItem = ({ item }) => (
+  <li>
+    <div className="name">{item.name}</div>
+  </li>
+)
+
+
+const Sections = Object.freeze({
+  TECHNOLOGIES: "technologies",
+  DESIGN: "design",
+  LANGUAGES: "languages",
+  TOOL_STACK: "toolStack",
+  KNOWLEDGE: "knowledge"
+});
+
 const Skills = () => {
+  const skillsSections = [
+    {
+      type: "technologiesDesign",
+      title: "",
+      icon: "",
+      skills: [],
+      subSections: [
+        {
+          type: Sections.TECHNOLOGIES,
+          title: "Technologies",
+          icon: "fa fa-code",
+          skills: [
+            { name: "Javascript / Typescript", percentage: "90%" },
+            { name: "React / Angular / Vue", percentage: "90%" },
+            { name: "HTML / CSS", percentage: "90%" },
+            { name: "Java", percentage: "65%" },
+            { name: "Python", percentage: "20%" },
+          ],
+        },
+        {
+          type: Sections.DESIGN,
+          title: "Design",
+          icon: "fa fa-paint-brush",
+          skills: [
+            { name: "Web Design", percentage: "90%" },
+            { name: "Figma", percentage: "60%" },
+            { name: "Photoshop", percentage: "20%" },
+            { name: "Graphic Design", percentage: "20%" },
+          ],
+        },
+      ],
+    },
+    {
+      type: Sections.TOOL_STACK,
+      title: "Tool Stack",
+      icon: "fa fa-cogs",
+      skills: [
+        { name: "Confluence", percentage: "95", icon: "" },
+        { name: "JIRA", percentage: "75", icon: "" },
+        { name: "GitHub", percentage: "45", icon: "" },
+        { name: "ChatGPT", percentage: "95", icon: "" },
+        { name: "Visual Studio", percentage: "95", icon: "" },
+        { name: "Postman", percentage: "85", icon: "" },
+        { name: "Jenkins", percentage: "85", icon: "" },
+        { name: "Atom", percentage: "75", icon: "" },
+      ],
+      subSections: []
+    },
+    {
+      type: "languagesKnowledge",
+      title: "",
+      icon: "",
+      skills: [],
+      subSections: [
+        {
+          type: Sections.LANGUAGES,
+          title: "Languages",
+          icon: "fa fa-flag",
+          skills: [
+            { name: "English", percentage: "95%" },
+            { name: "German", percentage: "45%" },
+            { name: "Hindi", percentage: "100%" },
+          ],
+        },
+        {
+          type: Sections.KNOWLEDGE,
+          title: "Knowledge",
+          icon: "fa fa-flag",
+          skills: [
+            { name: "Website hosting" },
+            { name: "iOS and android apps" },
+            { name: "Create logo design" },
+            { name: "Design for print" },
+            { name: "Modern and mobile-ready" },
+            { name: "Advertising services include" },
+            { name: "Graphics and animations" },
+            { name: "Search engine marketing" },
+          ],
+        },
+      ],
+    },
+  ];
+
+
+  console.log('skillsSections ==>', skillsSections)
+
   return (
     <Fragment>
       <div className="content skills">
         {/* title */}
         <div className="title">My Skills</div>
-        
-        {/* Technologies / Design content */}
-        <div className="row">
-          {/* Technologies List */}
-          <div className="col col-d-6 col-t-6 col-m-12 border-line-v">
-            <div className="skills-list">
-              <div className="skill-title border-line-h">
-                <div className="icon">
-                  <i className="fa fa-code" />
-                </div>
-                <div className="name">Technologies</div>
-              </div>
-              <ul>
-                <li className="border-line-h">
-                  <div className="name">Javascript / Typescript</div>
-                  <div className="progress">
-                    <div className="percentage" style={{ width: "90%" }} />
-                  </div>
-                </li>
-                <li className="border-line-h">
-                  <div className="name">React / Angular</div>
-                  <div className="progress">
-                    <div className="percentage" style={{ width: "65%" }} />
-                  </div>
-                </li>
-                <li className="border-line-h">
-                  <div className="name">HTML / CSS</div>
-                  <div className="progress">
-                    <div className="percentage" style={{ width: "75%" }} />
-                  </div>
-                </li>
-                <li>
-                  <div className="name">Java</div>
-                  <div className="progress">
-                    <div className="percentage" style={{ width: "85%" }} />
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          {/* Technologies List */}
-          
-          {/* Design List */}
-          <div className="col col-d-6 col-t-6 col-m-12 border-line-v">
-            <div className="skills-list">
-              <div className="skill-title border-line-h">
-                <div className="icon">
-                  <i className="fa fa-paint-brush" />
-                </div>
-                <div className="name">Design</div>
-              </div>
-              <ul>
-                <li className="border-line-h">
-                  <div className="name">Web Design</div>
-                  <div className="progress">
-                    <div className="percentage" style={{ width: "90%" }} />
-                  </div>
-                </li>
-                <li className="border-line-h">
-                  <div className="name">Figma</div>
-                  <div className="progress">
-                    <div className="percentage" style={{ width: "65%" }} />
-                  </div>
-                </li>
-                <li className="border-line-h">
-                  <div className="name">Photoshop</div>
-                  <div className="progress">
-                    <div className="percentage" style={{ width: "75%" }} />
-                  </div>
-                </li>
-                <li>
-                  <div className="name">Graphic Design</div>
-                  <div className="progress">
-                    <div className="percentage" style={{ width: "85%" }} />
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          {/* Design List */}
-          <div className="clear" />
-        </div>
-        {/* Technologies / Design content */}
 
-        {/* Tool Stack content */}
-        <div className="row"> 
-          {/* Tool Stack list */}
-          <div className="col col-d-12 col-t-12 col-m-12 border-line-v">
-            <div className="skills-list circles">
-              <div className="skill-title border-line-h">
-                <div className="icon">
-                  <i className="fa fa-cogs" />
-                </div>
-                <div className="name">Tool Stack</div>
-              </div>
-              <ul>
-                <li>
-                  <div className="name">Confluence</div>
-                  <div className="progress p90">
-                    <span>90%</span>{" "}
-                    <div className="slice">
-                      <div className="bar" />
-                      <div className="fill" />
+        {skillsSections.map((section, index) => {
+          return (
+            <div className="row" key={index}>
+              {/* Section with sub-sections start here */}
+              {section.subSections.length !== 0 && section.subSections.map((subSection, index) => {
+                return (
+                  <div key={index} className="col col-d-6 col-t-6 col-m-12 border-line-v">
+                    <div className={Sections.KNOWLEDGE === subSection.type ? "skills-list list" : "skills-list"}>
+                      <div className="skill-title border-line-h">
+                        <div className="icon">
+                          <i className={subSection.icon} />
+                        </div>
+                        <div className="name">{subSection.title}</div>
+                      </div>
+                      <ul>
+                        {subSection.skills.map((skill, index) => {
+                          return Sections.KNOWLEDGE === subSection.type ? (<NameListItem item={skill} key={index} />) : (<ListItem item={skill} key={index} />)
+                        })}
+                      </ul>
                     </div>
                   </div>
-                </li>
-                <li>
-                  <div className="name">JIRA</div>
-                  <div className="progress p75">
-                    <span>75%</span>{" "}
-                    <div className="slice">
-                      <div className="bar" />
-                      <div className="fill" />
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="name">GitHub</div>
-                  <div className="progress p85">
-                    <span>85%</span>{" "}
-                    <div className="slice">
-                      <div className="bar" />
-                      <div className="fill" />
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="name">ChatGPT</div>
-                  <div className="progress p95">
-                    <span>95%</span>{" "}
-                    <div className="slice">
-                      <div className="bar" />
-                      <div className="fill" />
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="name">Visual Studio</div>
-                  <div className="progress p95">
-                    <span>95%</span>{" "}
-                    <div className="slice">
-                      <div className="bar" />
-                      <div className="fill" />
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="name">Postman</div>
-                  <div className="progress p95">
-                    <span>95%</span>{" "}
-                    <div className="slice">
-                      <div className="bar" />
-                      <div className="fill" />
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="name">Jenkins</div>
-                  <div className="progress p95">
-                    <span>95%</span>{" "}
-                    <div className="slice">
-                      <div className="bar" />
-                      <div className="fill" />
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="name">Atom</div>
-                  <div className="progress p95">
-                    <span>95%</span>{" "}
-                    <div className="slice">
-                      <div className="bar" />
-                      <div className="fill" />
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="clear" />
-        </div>
-        {/* Tool Stack content */}
+                )
+              })}
+              {/* Section with sub-sections ends here */}
 
-        {/* Languages / Engineering practices content */}
-        <div className="row">
-          {/* Languages list */}
-          <div className="col col-d-6 col-t-6 col-m-12 border-line-v">
-            <div className="skills-list">
-              <div className="skill-title border-line-h">
-                <div className="icon">
-                  <i className="fa fa-flag" />
+            {/* Tool Stack section start here */}
+              {section.subSections.length === 0 && (
+                <div key={index} className="col col-d-12 col-t-12 col-m-12 border-line-v">
+                  <div className="skills-list circles">
+                    <div className="skill-title border-line-h">
+                      <div className="icon">
+                        <i className={section.icon} />
+                      </div>
+                      <div className="name">{section.title}</div>
+                    </div>
+                    <ul>
+                      {section.skills.map((skill, index) => {
+                        return (<CircularListItem item={skill} key={index} />)
+                      })}
+                    </ul>
+                  </div>
                 </div>
-                <div className="name">Languages</div>
-              </div>
-              <ul>
-                <li className="border-line-h">
-                  <div className="name">English</div>
-                  <div className="progress">
-                    <div className="percentage" style={{ width: "90%" }} />
-                  </div>
-                </li>
-                <li className="border-line-h">
-                  <div className="name">German</div>
-                  <div className="progress">
-                    <div className="percentage" style={{ width: "60%" }} />
-                  </div>
-                </li>
-                <li className="border-line-h">
-                  <div className="name">Italian</div>
-                  <div className="progress">
-                    <div className="percentage" style={{ width: "30%" }} />
-                  </div>
-                </li>
-                <li>
-                  <div className="name">French</div>
-                  <div className="progress ">
-                    <div className="percentage" style={{ width: "70%" }} />
-                  </div>
-                </li>
-              </ul>
+              )}
+            {/* Tool Stack section ends here */}
             </div>
-          </div>
-          {/* Languages list */}
-         
-          {/* Engineering practices list */}
-          <div className="col col-d-6 col-t-6 col-m-12 border-line-v">
-            <div className="skills-list list">
-              <div className="skill-title border-line-h">
-                <div className="icon">
-                  <i className="fa fa-list" />
-                </div>
-                <div className="name">Knowledge</div>
-              </div>
-              <ul>
-                <li>
-                  <div className="name">Website hosting</div>
-                </li>
-                <li>
-                  <div className="name">iOS and android apps</div>
-                </li>
-                <li>
-                  <div className="name">Create logo design</div>
-                </li>
-                <li>
-                  <div className="name">Design for print</div>
-                </li>
-                <li>
-                  <div className="name">Modern and mobile-ready</div>
-                </li>
-                <li>
-                  <div className="name">Advertising services include</div>
-                </li>
-                <li>
-                  <div className="name">Graphics and animations</div>
-                </li>
-                <li>
-                  <div className="name">Search engine marketing</div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          {/* Engineering practices list */}
-          <div className="clear" />
-        </div>
-        {/* Languages / Engineering practices content */}
+          )
+        })}
       </div>
     </Fragment>
   );

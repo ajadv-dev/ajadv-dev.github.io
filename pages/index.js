@@ -36,60 +36,60 @@ Skilled in both front and back-end technologies, I’m always eager to explore n
 </p>`;
 
 const resumeSectionData = {
-  resumeData : [
+  resumeData: [
     {
-      date : 'Feb 2020 - Present',
+      date: 'Feb 2020 - Present',
       name: 'Design Technologist II',
       company: 'frog designs Inc',
       active: true,
       description: 'Monitored technical aspects of the front-end delivery for several projects.'
     },
     {
-      date : 'Jul 2018 - Feb 2020',
+      date: 'Jul 2018 - Feb 2020',
       name: 'Senior Software Engineer',
       company: 'Larsen & Toubro Infotech Ltd (LTI)',
       active: false,
       description: 'Monitored technical aspects of the front-end delivery for several projects.'
     },
     {
-      date : 'Mar 2017 - May 2018',
+      date: 'Mar 2017 - May 2018',
       name: 'Associate Consultant',
       company: 'Capgemini',
       active: false,
       description: 'Monitored technical aspects of the front-end delivery for several projects.'
     },
     {
-      date : 'Nov 2015 - Mar 2017',
+      date: 'Nov 2015 - Mar 2017',
       name: 'Software Engineer',
       company: 'Creative Skills',
       active: false,
       description: 'Monitored technical aspects of the front-end delivery for several projects.'
     },
     {
-      date : 'Feb 2014 - Oct 2015',
+      date: 'Feb 2014 - Oct 2015',
       name: 'Software Engineer',
       company: 'Austere Technology Solutions',
       active: false,
       description: 'Monitored technical aspects of the front-end delivery for several projects.'
     }
   ],
-  educationData : [
+  educationData: [
     {
-      date : '2012 - 2013',
+      date: '2012 - 2013',
       name: 'C-DAC',
       place: 'C-DAC, Mumbai',
       active: false,
       description: "Post Graduate Diploma in Computer Application (PG-DAC)"
     },
     {
-      date : '2009 - 2012',
+      date: '2009 - 2012',
       name: 'B.E in E&TC',
       place: 'North Maharashtra University',
       active: false,
       description: "Bachelor's Degree in Electronics & telecommunications"
     },
     {
-      date : '2006 - 2009',
+      date: '2006 - 2009',
       name: 'Diploma in E&TC',
       place: 'Maharashtra State Board of Technical Education, Mumbai',
       active: false,
@@ -160,7 +160,7 @@ const IndexDark = () => {
           <Quote />
         </About>
         <Skills>
-          <SkillsSection />          
+          <SkillsSection />
         </Skills>
         <Resume>
           <ResumeSection resumeSectionData={resumeSectionData} />
