@@ -21,6 +21,9 @@ import Work from "../src/components/Work";
 import ContentContainer from "../src/layout/ContentContainer";
 import Header from "../src/layout/Header";
 import Layout from "../src/layout/Layout";
+import { useContext, useEffect } from "react";
+import Context from "../src/context/context";
+
 const RecentWorks = dynamic(
   () => import("../src/components/sections/RecentWorks"),
   {
@@ -100,6 +103,8 @@ const resumeSectionData = {
 
 
 const IndexDark = () => {
+  const { changeNav } = useContext(Context);
+
   return (
     <Layout bg={"blured"}>
       <Head>
@@ -117,13 +122,13 @@ const IndexDark = () => {
           <div className="title">Abhijeet Jadhav</div>
           <TypingAnimation />
           <div className="social">
-            <a target="_blank" rel="noreferrer" href="https://dribbble.com/">
+            {/* <a target="_blank" rel="noreferrer" href="https://dribbble.com/">
               <span className="fa fa-dribbble" />
+            </a> */}
+            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ajadv-dev/">
+              <span className="fa fa-linkedin" />
             </a>
-            <a target="_blank" rel="noreferrer" href="https://twitter.com/">
-              <span className="fa fa-twitter" />
-            </a>
-            <a target="_blank" rel="noreferrer" href="https://github.com/">
+            <a target="_blank" rel="noreferrer" href="https://github.com/ajadv-dev/">
               <span className="fa fa-github" />
             </a>
             <a target="_blank" rel="noreferrer" href="https://www.spotify.com/">
@@ -139,11 +144,11 @@ const IndexDark = () => {
           </div>
           {/* profile buttons */}
           <div className="lnks">
-            <a href="#" className="lnk">
+            <a href="pdf/abhijeet-jadhav-cv.pdf" download={'abhijeet-jadhav-cv.pdf'} className="lnk">
               <span className="text">Download CV</span>
               <span class="ion ion-ios-cloud-download"></span>
             </a>
-            <a href="#" className="lnk discover">
+            <a href={`#contacts`} className="lnk discover" onClick={() => changeNav('contacts')}>
               <span className="text">Contact Me</span>
               <span class="ion ion-paper-airplane"></span>
             </a>
@@ -164,7 +169,7 @@ const IndexDark = () => {
         </Skills>
         <Resume>
           <ResumeSection resumeSectionData={resumeSectionData} />
-          <Testimonials />
+          {/* <Testimonials /> */}
         </Resume>
         <Work>
           <RecentWorks />
