@@ -171,7 +171,7 @@ const IndexDark = () => {
         </Work>
         <Contact>
           <ContactInfo />
-          <ContactForm />
+          {/* <ContactForm /> */}
         </Contact>
       </ContentContainer>
     </Layout>
