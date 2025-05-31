@@ -148,7 +148,6 @@ const IndexDark = () => {
         <About>
           <AboutMe bio={bio} />
           <Services />
-          <Tech />
           <FunFact />
           {/*<Pricing />*/}
           {/*<Clients />*/}
