@@ -1095,6 +1095,7 @@ input[type="file"] {
 
 .service-items .service-item p {
 	margin: 0;
+	font-size: 15px;
 }
 
 @media (max-width: 560px) {

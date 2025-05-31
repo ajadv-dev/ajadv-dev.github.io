@@ -4,11 +4,13 @@ import Context from "../context/context";
 
 const headerMenus = [
   { title: "About", link: "about", icon: "icon fa fa-user-o" },
+  { title: "Toolbox", link: "tech", icon: "icon fa fa-code" },
   { title: "Skills", link: "skills", icon: "icon fa fa-microchip" },
   { title: "Resume", link: "resume", icon: "icon fa fa-list-alt" },
-  { title: "Works", link: "works", icon: "icon fa fa-object-ungroup" },
   { title: "Contact", link: "contacts", icon: "icon fa fa-envelope-o" },
 ];
+
+//TODO:: recent works : { title: "Works", link: "works", icon: "icon fa fa-object-ungroup" }
 
 const Header = ({ noSideBarBtn, menus, animationText }) => {
   const { changeNav, nav, changeSideBar } = useContext(Context);

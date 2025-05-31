@@ -23,6 +23,8 @@ import Header from "../src/layout/Header";
 import Layout from "../src/layout/Layout";
 import { useContext, useEffect } from "react";
 import Context from "../src/context/context";
+import Tech from "../src/components/sections/Tech";
+import TechStack from "../src/components/TechStack";
 
 const RecentWorks = dynamic(
   () => import("../src/components/sections/RecentWorks"),
@@ -122,24 +124,11 @@ const IndexDark = () => {
           <div className="title">Abhijeet Jadhav</div>
           <TypingAnimation />
           <div className="social">
-            {/* <a target="_blank" rel="noreferrer" href="https://dribbble.com/">
-              <span className="fa fa-dribbble" />
-            </a> */}
             <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ajadv-dev/">
               <span className="fa fa-linkedin" />
             </a>
             <a target="_blank" rel="noreferrer" href="https://github.com/ajadv-dev/">
               <span className="fa fa-github" />
-            </a>
-            <a target="_blank" rel="noreferrer" href="https://www.spotify.com/">
-              <span className="fa fa-spotify" />
-            </a>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://stackoverflow.com/"
-            >
-              <span className="fa fa-stack-overflow" />
             </a>
           </div>
           {/* profile buttons */}
@@ -159,11 +148,14 @@ const IndexDark = () => {
         <About>
           <AboutMe bio={bio} />
           <Services />
-          <Pricing />
           <FunFact />
-          <Clients />
-          <Quote />
+          {/*<Pricing />*/}
+          {/*<Clients />*/}
+          {/*<Quote />*/}
         </About>
+        <TechStack>
+          <Tech></Tech>
+        </TechStack>
         <Skills>
           <SkillsSection />
         </Skills>
@@ -171,9 +163,10 @@ const IndexDark = () => {
           <ResumeSection resumeSectionData={resumeSectionData} />
           {/* <Testimonials /> */}
         </Resume>
-        <Work>
-          <RecentWorks />
-        </Work>
+
+        {/*//TODO:: add once its ready*/}
+        {/*<Work><RecentWorks /></Work>*/}
+
         <Contact>
           <ContactInfo />
           {/* <ContactForm /> */}

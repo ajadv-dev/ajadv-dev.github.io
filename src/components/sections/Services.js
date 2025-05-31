@@ -3,23 +3,43 @@ import { Fragment } from "react";
 const data = [
   {
     icon: "fa fa-code",
-    title: "Web Development",
-    desc: "Modern and mobile-ready website that will help you reach all of your marketing.",
+    title: "Frontend Engineering",
+    desc: "Crafting scalable, high-performance web applications using React, Vue, Angular, and modern UI libraries.",
+    bulletPoints: [
+        'Responsive, component-driven design',
+        'Micro-frontend architecture with Nx & Module Federation',
+        'Enterprise-grade application development'
+       ]
   },
   {
-    icon: "fa fa-music",
-    title: "Music Writing",
-    desc: "Music copying, writing, creating, transcription, arranging and composition services.",
+    icon: "fa fa-pencil",
+    title: "Design to Prototype Engineering",
+    desc: "Bridging design and development with high-fidelity prototypes and pixel-perfect UI/UX.",
+    bulletPoints: [
+      'Expert in Storybook, design systems, and design handoff',
+      'Rapid prototyping in collaboration with UI/UX teams',
+      'Vivid Design System, Material UI, Tailwind CSS'
+    ]
   },
   {
-    icon: "fa fa-buysellads",
-    title: "Advetising",
-    desc: "Advertising services include television, radio, print, mail, and web apps.",
-  },
+    icon: "fa fa-check-square-o",
+    title: "Testing & Quality Engineering",
+    desc: "Ensuring rock-solid quality with modern testing frameworks and automation.",
+    bulletPoints: [
+      'Unit & integration testing with Vitest, Jest',
+      'End-to-end testing with Cypress & Playwright',
+      'CI/CD integration for test automation (GitHub Actions, Jenkins)'
+    ]
+},
   {
-    icon: "fa fa-gamepad",
-    title: "Game Development",
-    desc: "Developing memorable and unique mobile android, ios and video games.",
+    icon: "fa fa-cogs",
+    title: "DevOps & CI/CD for Frontend",
+    desc: "Accelerating delivery pipelines and maintaining code quality at scale.",
+    bulletPoints: [
+      'Custom CI/CD pipelines using YAML, Jenkins, GitHub Actions',
+      'Automated deployments to AWS S3 & EC2 and other cloud environments',
+      'Monitoring & analytics integration with Grafana and more'
+    ]
   },
 ];
 
@@ -30,7 +50,7 @@ const Services = ({ serviceList }) => {
       <div className="content services">
         {/* title */}
         <div className="title">
-          <span className="first-word">My</span> Services
+          <span className="first-word">What</span> I Do
         </div>
         {/* content */}
         <div className="row service-items border-line-v">
@@ -59,64 +79,3 @@ const Services = ({ serviceList }) => {
   );
 };
 export default Services;
-
-export const ServicesClassic = () => {
-  return (
-    <div className="content services">
-      {/* title */}
-      <div className="title">My Services</div>
-      {/* content */}
-      <div className="row service-items border-line-v">
-        {/* service item */}
-        <div className="col col-d-6 col-t-6 col-m-12 border-line-h">
-          <div className="service-item">
-            <div className="icon">
-              <span className="ion ion-code" />
-            </div>
-            <div className="name">Web Development</div>
-            <p>
-              Modern and mobile-ready website that will help you reach all of
-              your marketing.
-            </p>
-          </div>
-        </div>
-        {/* service item */}
-        <div className="col col-d-6 col-t-6 col-m-12 border-line-h">
-          <div className="service-item">
-            <div className="icon">
-              <span className="ion ion-music-note" />
-            </div>
-            <div className="name">Music Writing</div>
-            <p>
-              Music copying, transcription, arranging and composition services.
-            </p>
-          </div>
-        </div>
-        {/* service item */}
-        <div className="col col-d-6 col-t-6 col-m-12">
-          <div className="service-item">
-            <div className="icon">
-              <span className="ion ion-speakerphone" />
-            </div>
-            <div className="name">Advetising</div>
-            <p>
-              Advertising services include television, radio, print, mail and
-              web.
-            </p>
-          </div>
-        </div>
-        {/* service item */}
-        <div className="col col-d-6 col-t-6 col-m-12">
-          <div className="service-item">
-            <div className="icon">
-              <span className="ion ion-ios-game-controller-b" />
-            </div>
-            <div className="name">Game Development</div>
-            <p>Developing memorable and unique mobile android, ios games.</p>
-          </div>
-        </div>
-        <div className="clear" />
-      </div>
-    </div>
-  );
-};
