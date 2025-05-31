@@ -4,6 +4,7 @@ import Context from "../context/context";
 
 const headerMenus = [
   { title: "About", link: "about", icon: "icon fa fa-user-o" },
+  { title: "Toolbox", link: "tech", icon: "icon fa fa-code" },
   { title: "Skills", link: "skills", icon: "icon fa fa-microchip" },
   { title: "Resume", link: "resume", icon: "icon fa fa-list-alt" },
   { title: "Contact", link: "contacts", icon: "icon fa fa-envelope-o" },

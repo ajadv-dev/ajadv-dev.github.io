@@ -23,6 +23,8 @@ import Header from "../src/layout/Header";
 import Layout from "../src/layout/Layout";
 import { useContext, useEffect } from "react";
 import Context from "../src/context/context";
+import Tech from "../src/components/sections/Tech";
+import TechStack from "../src/components/TechStack";
 
 const RecentWorks = dynamic(
   () => import("../src/components/sections/RecentWorks"),
@@ -146,11 +148,15 @@ const IndexDark = () => {
         <About>
           <AboutMe bio={bio} />
           <Services />
+          <Tech />
           <FunFact />
           {/*<Pricing />*/}
           {/*<Clients />*/}
           {/*<Quote />*/}
         </About>
+        <TechStack>
+          <Tech></Tech>
+        </TechStack>
         <Skills>
           <SkillsSection />
         </Skills>
