@@ -1,71 +1,62 @@
 import { Fragment } from "react";
 import { Icon } from '@iconify/react';
-import {OrbitingCircles} from "@/components/magicui/orbiting-circles";
+import { OrbitingCircles } from "@/components/magicui/orbiting-circles";
 
 const techs = {
-    frontend : [
+    development: [
         { name: "JavaScript", icon: "logos:javascript" },
         { name: "TypeScript", icon: "logos:typescript-icon" },
         { name: "React", icon: "logos:react" },
         { name: "VueJs", icon: "logos:vue" },
         { name: "Angular", icon: "logos:angular-icon" },
-    ],
-    styles: [
+        { name: "NextJs", icon: "logos:nextjs-icon" },
+        { name: "HTML", icon: "logos:html-5" },
+        { name: "CSS", icon: "logos:css-3" },
         { name: "Tailwind", icon: "logos:tailwindcss-icon" },
         { name: "Material UI", icon: "logos:material-ui" },
-        { name: "CSS", icon: "logos:css-3" },
-        { name: "HTML", icon: "logos:html-5" },
-    ],
-    designToPrototype: [
-        { name: "StoryBook", icon: "logos:storybook-icon" },
-        { name: "Figma", icon: "logos:figma" },
-    ],
-    middleware: [
-        { name: "Pinia", icon: "logos:pinia" },
         { name: "Redux", icon: "logos:redux" },
-        { name: "NgInx", icon: "logos:nginx" },
-        { name: "Axios", icon: "logos:axios" },
+        { name: "Pinia", icon: "logos:pinia" },
         { name: "React Query", icon: "logos:react-query-icon" },
+        { name: "Axios", icon: "logos:axios" },
         { name: "GraphQL", icon: "logos:graphql" },
+        { name: "Java", icon: "logos:java" },
+        { name: "Python", icon: "logos:python" },
+        { name: "PHP", icon: "logos:php" },
     ],
-    archBuild: [
-        { name: "NX", icon: "logos:nx" },
+
+    toolsAndArchitecture: [
+        { name: "NX", icon: "simple-icons:nx" },
         { name: "Vite", icon: "logos:vitejs" },
         { name: "Webpack", icon: "logos:webpack" },
+        { name: "NgInx", icon: "logos:nginx" },
         { name: "Jira", icon: "logos:jira" },
         { name: "Confluence", icon: "logos:confluence" },
-    ],
-    testing: [
-        { name: "Vitest", icon: "logos:vitest" },
-        { name: "Jest", icon: "logos:jest" },
-        { name: "Cypress", icon: "logos:cypress-icon" },
-        { name: "Playwright", icon: "logos:playwright" },
-    ],
-    CICD: [
-        { name: "Jenkins", icon: "logos:jenkins-icon" },
-        { name: "Github Actions", icon: "logos:github-actions" },
-        { name: "Aws", icon: "logos:aws" },
-        { name: "Grafana", icon: "logos:grafana" },
-    ],
-    others: [
+        { name: "StoryBook", icon: "logos:storybook-icon" },
+        { name: "Figma", icon: "simple-icons:figma" },
         { name: "Webstorm", icon: "logos:webstorm" },
         { name: "VsCode", icon: "logos:visual-studio-code" },
         { name: "MSql", icon: "logos:mysql" },
         { name: "Postgresql", icon: "logos:postgresql" },
-        { name: "Github", icon: "logos:github-octocat" },
+        { name: "Github", icon: "simple-icons:github" },
         { name: "Android", icon: "logos:android-icon" },
-        { name: "ios", icon: "logos:ios" },
+        { name: "iOS", icon: "simple-icons:apple" },
     ],
-    backend : [
-        { name: "Java", icon: "logos:java" },
-        { name: "Python", icon: "logos:python" },
-        { name: "PHP", icon: "logos:php" }
+
+    testingAndCI: [
+        { name: "Vitest", icon: "logos:vitest" },
+        { name: "Jest", icon: "logos:jest" },
+        { name: "Cypress", icon: "simple-icons:cypress" },
+        { name: "Playwright", icon: "logos:playwright" },
+        { name: "Jenkins", icon: "simple-icons:jenkins" },
+        { name: "Github Actions", icon: "simple-icons:githubactions" },
+        { name: "AWS", icon: "simple-icons:amazonaws" },
+        { name: "Grafana", icon: "logos:grafana" },
     ],
 };
 
 const Tech = () => {
-    const baseRadius = 20;
-    const radiusStep = 28;
+    const baseRadius = 80;
+    const radiusStep = 60;
 
     const getRandom = (min, max) => Math.random() * (max - min) + min;
 
@@ -91,9 +82,9 @@ const Tech = () => {
                         const reverse = Math.random() > 0.5;
                         const speed = getRandom(0.5, 2);
 
-                        const minSize = 50;
-                        const maxSize = 20;
-                        const iconSize = maxSize - (reversedIndex / totalLayers) * (maxSize - minSize);
+                        const minSize = 25;
+                        const maxSize = 50;
+                        const iconSize = minSize - (reversedIndex / totalLayers) * (minSize - maxSize);
 
                         return (
                             <OrbitingCircles
@@ -106,7 +97,7 @@ const Tech = () => {
                             >
                                 {items.map(({ name, icon }) => (
                                     <div key={name} title={name}>
-                                        <Icon icon={icon} width={getRandom(iconSize * 0.85, iconSize * 1.15)} />
+                                        <Icon icon={icon} width={getRandom(iconSize * 0.85, iconSize * 1.15)} className="text-white" />
                                     </div>
                                 ))}
                             </OrbitingCircles>

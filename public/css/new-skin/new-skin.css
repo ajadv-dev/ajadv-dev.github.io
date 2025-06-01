@@ -733,6 +733,7 @@ input[type="file"] {
 
 .card-started .profile.no-photo .slide {
 	height: 57%;
+	background-position: 50% 44%;
 }
 
 .card-started .profile .slide:before,
