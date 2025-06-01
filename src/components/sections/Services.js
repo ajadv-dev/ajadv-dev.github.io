@@ -3,7 +3,7 @@ import { Fragment } from "react";
 const data = [
   {
     icon: "fa fa-code",
-    title: "Frontend Engineering",
+    title: "Software Engineering",
     desc: "Crafting scalable, high-performance web applications using React, Vue, Angular, and modern UI libraries.",
     bulletPoints: [
         'Responsive, component-driven design',
@@ -34,7 +34,7 @@ const data = [
   {
     icon: "fa fa-cogs",
     title: "DevOps & CI/CD for Frontend",
-    desc: "Accelerating delivery pipelines and maintaining code quality at scale.",
+    desc: "Accelerating delivery pipelines and maintaining code quality at scale, and smart monitoring with Grafana.",
     bulletPoints: [
       'Custom CI/CD pipelines using YAML, Jenkins, GitHub Actions',
       'Automated deployments to AWS S3 & EC2 and other cloud environments',

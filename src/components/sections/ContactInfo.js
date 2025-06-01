@@ -13,7 +13,7 @@ const ContactInfo = () => {
     { title: "Email", type: contentType.EMAIL, value: "abhijeetj26@gmail.com" },
     { title: "Phone", type: contentType.PHONE, value: "+48-507439452" },
     { title: "LinkedIn", type: contentType.URL, value: "https://www.linkedin.com/in/ajadv-dev", urlText: "in/ajadv-dev" },
-    { title: "Freelance", type: contentType.TEXT, value: "Available" }
+    // { title: "Freelance", type: contentType.TEXT, value: "Available" }
   ]
 
 

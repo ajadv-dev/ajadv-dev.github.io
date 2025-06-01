@@ -32,50 +32,63 @@ const RecentWorks = dynamic(
     ssr: false,
   }
 );
-const bio = `<p>
-<strong>Hello! I’m Abhijeet Jadhav</strong>, 
-a Full Stack Web Developer and Design Technologist based in Krakow, Poland.
-I have a strong background in ReactJS, Angular, and JavaScript, Typescript and have worked across finance and e-learning domains.
-Skilled in both front and back-end technologies, I’m always eager to explore new challenges, especially in immersive tech like AR/VR.
-<br>Let’s team up to build something great!</br>
+const bio = `<p>A passionate Full Stack Web Developer & Design Technologist based in Krakow, Poland,
+bringing over 10 years of experience building scalable, high-performance applications with React, Vue, and Angular.
+
+<br>I specialize in transforming design into code, architecting micro-frontends,
+and crafting enterprise-grade UI systems across diverse domains like Finance, e-Learning, Entertainment, and Communication.</br>
+
+<br>I bridge design and engineering, lead cross-functional teams,
+and drive end-to-end excellence—from system architecture to CI/CD and automated testing.</br>
+
+<br>I’m always eager to explore new challenges, especially in immersive tech like AR/VR.</br>
+
+<br>Let’s team up to build seamless, impactful digital experiences!</br>
 </p>`;
 
 const resumeSectionData = {
   resumeData: [
     {
-      date: 'Feb 2020 - Present',
+      date: 'Aug 2022 - Present',
+      name: 'Software Engineer',
+      company: 'Vonage (Part of Ericsson)',
+      active: true,
+      description: 'Built scalable micro-frontends, led UI development, ensured quality, and streamlined CI/CD pipelines.'
+    },
+      {
+      date: 'Feb 2020 - Jul 2022',
       name: 'Design Technologist II',
       company: 'frog designs Inc',
-      active: true,
-      description: 'Monitored technical aspects of the front-end delivery for several projects.'
+      active: false,
+      description: 'Led UI development, built dynamic apps, ensured quality, and supported team through agile collaboration.'
     },
     {
       date: 'Jul 2018 - Feb 2020',
       name: 'Senior Software Engineer',
       company: 'Larsen & Toubro Infotech Ltd (LTI)',
       active: false,
-      description: 'Monitored technical aspects of the front-end delivery for several projects.'
+      description: 'Developed Web apps, optimized UX/UI, led FSD creation, and supported agile delivery with team guidance.'
     },
     {
       date: 'Mar 2017 - May 2018',
       name: 'Associate Consultant',
       company: 'Capgemini',
       active: false,
-      description: 'Monitored technical aspects of the front-end delivery for several projects.'
+      description: 'Delivered web applications, led a 5-member team, and drove project success through agile leadership.'
     },
     {
       date: 'Nov 2015 - Mar 2017',
       name: 'Software Engineer',
       company: 'Creative Skills',
       active: false,
-      description: 'Monitored technical aspects of the front-end delivery for several projects.'
+      description: 'Built responsive UIs using frontend frameworks while mentoring teams and maintaining code quality.'
     },
     {
       date: 'Feb 2014 - Oct 2015',
       name: 'Software Engineer',
       company: 'Austere Technology Solutions',
       active: false,
-      description: 'Monitored technical aspects of the front-end delivery for several projects.'
+      description: 'Built responsive UIs using frontend frameworks while mentoring teams and maintaining code quality.'
     }
   ],
   educationData: [
@@ -119,7 +132,7 @@ const IndexDark = () => {
         <div className="profile no-photo">
           <div
             className="slide"
-            style={{ backgroundImage: "url(images/avatar-aj.jpg)" }}
+            style={{ backgroundImage: "url(images/avatar-aj1.jpg)" }}
           />
           <div className="title">Abhijeet Jadhav</div>
           <TypingAnimation />

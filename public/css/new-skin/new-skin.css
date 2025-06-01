@@ -733,6 +733,7 @@ input[type="file"] {
 
 .card-started .profile.no-photo .slide {
 	height: 57%;
+	background-position: 50% 44%;
 }
 
 .card-started .profile .slide:before,
@@ -937,6 +938,10 @@ input[type="file"] {
 /* About */
 .text-box p {
 	margin-top: 0;
+}
+
+.color-text {
+	color: #edff20;
 }
 
 .content.about p {

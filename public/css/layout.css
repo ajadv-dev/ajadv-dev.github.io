@@ -1248,6 +1248,17 @@
   -o-transition: all 0.3s ease 0s;
 }
 
+.skills-list ul li .progress .icon-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 /*
 	6. Works
 */
