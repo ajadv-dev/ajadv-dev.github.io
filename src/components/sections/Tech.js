@@ -111,7 +111,7 @@
 //
 // export default Tech;
 
-import { Fragment } from "react";
+import {Fragment, useEffect, useState} from "react";
 import { useMediaQuery } from 'react-responsive';
 import { Icon } from '@iconify/react';
 import { OrbitingCircles } from "@/components/magicui/orbiting-circles";
@@ -169,10 +169,19 @@ const techs = {
 };
 
 const Tech = () => {
-    // Mobile is <768px, tablet & desktop is >=768px
-    const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+    const [isMobile, setIsMobile] = useState(false);
 
-    // Parameters based on screen size
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        handleResize(); // initial check
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     const baseRadius = isMobile ? 50 : 80;
     const radiusStep = isMobile ? 45 : 60;
     const minSize = 25;
