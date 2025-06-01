@@ -545,7 +545,6 @@ textarea:focus,
 
 .header .top-menu.menu-minimal ul li a .link {
     position: absolute;
-    left: 65%;
     top: 50%;
     font-size: 12px;
     color: #fff;
@@ -561,7 +560,6 @@ textarea:focus,
 }
 
 .header .top-menu.menu-minimal ul li a:hover .link {
-    left: 75%;
     opacity: 1;
 }
 
