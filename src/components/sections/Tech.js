@@ -79,7 +79,7 @@ const Tech = () => {
     return (
         <Fragment>
             <div className="content skills">
-                <div className="title">My Tech Stack</div>
+                <div className="title">Technology Stack</div>
 
                 <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
                     {sortedTechLayers.map(([category, items], index) => {

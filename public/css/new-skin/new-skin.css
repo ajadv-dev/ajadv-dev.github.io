@@ -939,6 +939,10 @@ input[type="file"] {
 	margin-top: 0;
 }
 
+.color-text {
+	color: #edff20;
+}
+
 .content.about p {
 	margin-bottom: 0;
 }

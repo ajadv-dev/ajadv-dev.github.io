@@ -147,7 +147,7 @@ const Skills = () => {
     <Fragment>
       <div className="content skills">
         {/* title */}
-        <div className="title">My Skills</div>
+        <div className="title">Skills</div>
 
         {skillsSections.map((section, index) => {
           return (
