@@ -32,12 +32,18 @@ const RecentWorks = dynamic(
     ssr: false,
   }
 );
-const bio = `<p>
-<strong>Hello! I’m Abhijeet Jadhav</strong>, 
-a Full Stack Web Developer and Design Technologist based in Krakow, Poland.
-I have a strong background in ReactJS, Angular, and JavaScript, Typescript and have worked across finance and e-learning domains.
-Skilled in both front and back-end technologies, I’m always eager to explore new challenges, especially in immersive tech like AR/VR.
-<br>Let’s team up to build something great!</br>
+const bio = `<p>A passionate Full Stack Web Developer & Design Technologist based in Krakow, Poland,
+bringing over 10 years of experience building scalable, high-performance applications with <TypingAnimation data="['React', 'Vue', 'Agnular']" /> React, Vue, and Angular.
+
+<br>I specialize in transforming design into code, architecting micro-frontends,
+and crafting enterprise-grade UI systems across diverse domains like Finance, e-Learning, Entertainment, and Communication.</br>
+
+<br>I bridge design and engineering, lead cross-functional teams,
+and drive end-to-end excellence—from system architecture to CI/CD and automated testing.</br>
+
+<!--<br>I’m always eager to explore new challenges, especially in immersive tech like AR/VR.</br>-->
+
+<br>Let’s team up to build seamless, impactful digital experiences!</br>
 </p>`;
 
 const resumeSectionData = {

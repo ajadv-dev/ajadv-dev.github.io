@@ -1,4 +1,5 @@
-import { Fragment } from "react";
+import {Fragment, useMemo} from "react";
+import {Icon} from "@iconify/react";
 
 const Slice = () => (
   <div className="slice">
@@ -17,17 +18,19 @@ const ListItem = ({ item }) => (
 )
 
 const CircularListItem = ({ item }) => (
-  <li>
-    <div className="name">{item.name}</div>
-    <div className={`progress p${item.percentage}`}>
-      <span>{item.percentage}%</span>{" "}
-      <div className="slice">
-        <div className="bar" />
-        <div className="fill" />
+    <li>
+      <div className="name">{item.name}</div>
+      <div className={`progress p${item.percentage}`}>
+      <span className="icon-center">
+        <Icon icon={item.icon} width={24} height={24} className="text-white/85" />
+      </span>
+        <div className="slice">
+          <div className="bar" />
+          <div className="fill" />
+        </div>
       </div>
-    </div>
-  </li>
-)
+    </li>
+);
 
 const NameListItem = ({ item }) => (
   <li>
@@ -57,11 +60,11 @@ const Skills = () => {
           title: "Technologies",
           icon: "fa fa-code",
           skills: [
-            { name: "Javascript / Typescript", percentage: "90%" },
-            { name: "React / Angular / Vue", percentage: "90%" },
-            { name: "HTML / CSS", percentage: "90%" },
-            { name: "Java", percentage: "65%" },
-            { name: "Python", percentage: "20%" },
+            { name: "Javascript / Typescript", percentage: "95%" },
+            { name: "React / Vue / Angular", percentage: "95%" },
+            { name: "HTML5 / CSS3 / SCSS", percentage: "95%" },
+            { name: "Redux / Pinia", percentage: "90%" },
+            { name: "Nx Monorepo / Module Federation", percentage: "25%" }
           ],
         },
         {
@@ -69,10 +72,11 @@ const Skills = () => {
           title: "Design",
           icon: "fa fa-paint-brush",
           skills: [
-            { name: "Web Design", percentage: "90%" },
-            { name: "Figma", percentage: "60%" },
-            { name: "Photoshop", percentage: "20%" },
-            { name: "Graphic Design", percentage: "20%" },
+            { name: "Design Systems (Vivid, Tailwind)", percentage: "95%" },
+            { name: "Storybook / Prototyping", percentage: "90%" },
+            { name: "UI/UX Collaboration & Handoff", percentage: "95%" },
+            { name: "Web & Responsive Design", percentage: "95%" },
+            { name: "Figma / Wireframe", percentage: "85%" },
           ],
         },
       ],
@@ -82,14 +86,14 @@ const Skills = () => {
       title: "Tool Stack",
       icon: "fa fa-cogs",
       skills: [
-        { name: "Confluence", percentage: "95", icon: "" },
-        { name: "JIRA", percentage: "75", icon: "" },
-        { name: "GitHub", percentage: "45", icon: "" },
-        { name: "ChatGPT", percentage: "95", icon: "" },
-        { name: "Visual Studio", percentage: "95", icon: "" },
-        { name: "Postman", percentage: "85", icon: "" },
-        { name: "Jenkins", percentage: "85", icon: "" },
-        { name: "Atom", percentage: "75", icon: "" },
+        { name: "Confluence", percentage: "85", icon: "simple-icons:confluence" },
+        { name: "JIRA", percentage: "85", icon: "simple-icons:jirasoftware" },
+        { name: "GitHub", percentage: "95", icon: "simple-icons:github" },
+        { name: "ChatGPT", percentage: "95", icon: "simple-icons:openai" },
+        { name: "Grafana", percentage: "40", icon: "simple-icons:grafana" },
+        { name: "Postman", percentage: "80", icon: "simple-icons:postman" },
+        { name: "Jenkins", percentage: "70", icon: "simple-icons:jenkins" },
+        { name: "Storybook", percentage: "75", icon: "simple-icons:storybook" }
       ],
       subSections: []
     },
@@ -106,7 +110,6 @@ const Skills = () => {
           skills: [
             { name: "English", percentage: "95%" },
             { name: "German", percentage: "45%" },
-            { name: "Hindi", percentage: "100%" },
           ],
         },
         {
@@ -115,21 +118,30 @@ const Skills = () => {
           icon: "fa fa-flag",
           skills: [
             { name: "Website hosting" },
-            { name: "iOS and android apps" },
-            { name: "Create logo design" },
-            { name: "Design for print" },
-            { name: "Modern and mobile-ready" },
-            { name: "Advertising services include" },
-            { name: "Graphics and animations" },
-            { name: "Search engine marketing" },
+            { name: "UI/UX collaboration & accessibility" },
+            { name: "Cross-browser & multi-device compatibility" },
+            { name: "REST & GraphQL API integration" },
+            { name: "Frontend performance optimization" },
+            { name: "Git-based version control & code reviews" },
+            { name: "Agile delivery using SCRUM, JIRA, Confluence" },
+            { name: "Data visualization with D3.js, Chart.js, Grafana" },
+            { name: "Tech documentation & stakeholder demos" }
           ],
         },
       ],
     },
   ];
 
-
-  console.log('skillsSections ==>', skillsSections)
+  const getSectionClasses = (currentSection) => {
+      switch (currentSection) {
+        case Sections.LANGUAGES:
+          return 'col-d-4 col-t-4';
+        case Sections.KNOWLEDGE:
+          return 'col-d-8 col-t-8';
+        default:
+          return 'col-d-6 col-t-6';
+      }
+  };
 
   return (
     <Fragment>
@@ -143,7 +155,7 @@ const Skills = () => {
               {/* Section with sub-sections start here */}
               {section.subSections.length !== 0 && section.subSections.map((subSection, index) => {
                 return (
-                  <div key={index} className="col col-d-6 col-t-6 col-m-12 border-line-v">
+                  <div key={subSection.type+"_"+index} className={'col col-m-12 border-line-v ' + getSectionClasses(subSection.type)}>
                     <div className={Sections.KNOWLEDGE === subSection.type ? "skills-list list" : "skills-list"}>
                       <div className="skill-title border-line-h">
                         <div className="icon">

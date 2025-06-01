@@ -1,12 +1,82 @@
 import { Fragment } from "react";
 import TypingAnimation from "../TypingAnimation";
 
+
+const PortfolioIntro = () => {
+  return (
+      <section className="bg-black text-white px-6 py-12 md:py-20 text-center">
+        <h1 className="text-2xl md:text-3xl font-semibold mb-4">
+          Hello, I’m <span className="text-yellow-400 font-bold">Abhijeet Jadhav</span>
+        </h1>
+
+        <h2 className="text-3xl md:text-5xl font-extrabold mb-2 leading-tight">
+          Frontend Developer & Design Technologist
+        </h2>
+
+        <h3 className="text-xl md:text-2xl font-medium text-gray-300 mb-6">
+          Based in Krakow, Poland
+        </h3>
+
+        <p className="max-w-3xl mx-auto text-gray-400 text-base md:text-lg leading-relaxed">
+          With <span className="text-yellow-400 font-medium">10+ years</span> of experience building scalable web apps, modular frontends,
+          and enterprise UI systems using{" "}
+          <span className="text-yellow-400">React, Angular, Vue & TypeScript</span>. I specialize in{" "}
+          <span className="text-yellow-400">design-to-code prototyping</span>,{" "}
+          <span className="text-yellow-400">micro-frontend architecture</span>, and leading cross-functional teams
+          to deliver intuitive, high-impact digital experiences.
+        </p>
+
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div>
+            <div className="text-3xl font-bold text-yellow-400">10+</div>
+            <div className="text-sm text-gray-400 mt-2">Years of Experience</div>
+          </div>
+          <div>
+            <div className="text-3xl font-bold text-yellow-400">100+</div>
+            <div className="text-sm text-gray-400 mt-2">Completed Projects</div>
+          </div>
+          <div>
+            <div className="text-3xl font-bold text-yellow-400">12+</div>
+            <div className="text-sm text-gray-400 mt-2">Domains Served</div>
+          </div>
+          <div>
+            <div className="text-3xl font-bold text-yellow-400">20+</div>
+            <div className="text-sm text-gray-400 mt-2">Tech Stack Tools</div>
+          </div>
+        </div>
+      </section>
+  );
+};
+
+
+
 const bio_ = ` <p>
-<strong>Hello! I’m Abhijeet Jadhav</strong>, 
-a Full Stack Web Developer and Design Technologist based in Krakow, Poland.
-I have a strong background in ReactJS, Angular, and JavaScript, Typescript and have worked across finance and e-learning domains.
-Skilled in both front and back-end technologies, I’m always eager to explore new challenges, especially in immersive tech like AR/VR.
-<br>Let’s team up to build something great!</br>
+<!--<br>A passionate Full Stack Web Developer & Design Technologist based in Krakow, Poland,-->
+<!--bringing over 10 years of experience building scalable, high-performance applications with React, Vue, and Angular.</br>-->
+
+<!--<br>I specialize in transforming design into code, architecting micro-frontends,-->
+<!--and crafting enterprise-grade UI systems across diverse domains like Finance, e-Learning, Entertainment, and Communication.</br>-->
+
+<!--<br>I bridge design and engineering, lead cross-functional teams,-->
+<!--and drive end-to-end excellence—from system architecture to CI/CD and automated testing.</br>-->
+
+<!--<br>I’m always eager to explore new challenges, especially in immersive tech like AR/VR.</br>-->
+
+<!--<br>Let’s team up to build seamless, impactful digital experiences!</br>-->
+
+<p>
+Full Stack Web Developer & Design Technologist based in Krakow, with 10+ years of experience delivering scalable, high-performance apps using React, Vue, and Angular.
+</p>
+<p>
+I turn designs into code, build micro-frontends, and architect enterprise UI systems across Finance, e-Learning, and more.
+</p>
+<p>
+From design to deployment, I lead teams, shape frontend architecture, and ensure CI/CD and testing excellence.
+</p>
+<p>
+Passionate about AR/VR and future-forward tech—let’s build impactful digital experiences together!
+</p>
+
 </p>`;
 const AboutMe = ({ bio }) => {
   return (
@@ -19,71 +89,28 @@ const AboutMe = ({ bio }) => {
         {/* content */}
         <div className="row">
           <div className="col col-d-12 col-t-12 col-m-12 border-line-v">
-            <div
-              className="text-box"
-              dangerouslySetInnerHTML={{ __html: bio ? bio : bio_ }}
-            ></div>
-          </div>
-          {/* <div className="col col-d-6 col-t-6 col-m-12 border-line-v">
-            <div className="info-list">
-              <ul>
-                <li>
-                  <strong>Age . . . . .</strong> 24
-                </li>
-                <li>
-                  <strong>Residence . . . . .</strong> USA
-                </li>
-                <li>
-                  <strong>Freelance . . . . .</strong> Available
-                </li>
-                <li>
-                  <strong>Address . . . . .</strong> London, UK
-                </li>
-              </ul>
+            <div className="">
+              <p>
+                Full Stack Web Developer & Design Technologist based in Krakow, with <span className="first-word">10+ years</span> of experience delivering scalable, high-performance apps using React, Vue, and Angular.
+              </p><br></br>
+              <p>
+                I turn designs into code, build micro-frontends, and architect enterprise UI systems across Finance, e-Learning, and more.
+              </p><br></br>
+              <p>
+                From design to deployment, I lead teams, shape frontend architecture, and ensure CI/CD and testing excellence.
+              </p><br></br>
+              <p>
+                Passionate about AR/VR and future-forward tech—let’s build impactful digital experiences together!
+              </p><br></br>
             </div>
-          </div> */}
-          <div className="clear" />
+          </div>
+
+          <PortfolioIntro></PortfolioIntro>
+
+          <div className="clear"/>
         </div>
       </div>
     </Fragment>
   );
 };
 export default AboutMe;
-
-export const AboutMeClassic = () => {
-  return (
-    <div className="content about">
-      {/* title */}
-      <div className="title">About Me</div>
-      {/* content */}
-      <div className="row">
-        <div className="col col-d-12 col-t-12 col-m-12 border-line-v">
-          <div className="text-box">
-            <p>
-              I am Abhijeet Jadhav, web designer from USA, California. I have rich
-              experience in web site design and building and customization, also
-              I am good at wordpress. I love to talk with you about our unique.
-            </p>
-          </div>
-          <div className="info-list">
-            <ul>
-              <li>
-                <strong>Age . . . . .</strong> 24
-              </li>
-              <li>
-                <strong>Residence . . . . .</strong> USA
-              </li>
-              <li>
-                <strong>Freelance . . . . .</strong> Available
-              </li>
-              <li>
-                <strong>Address . . . . .</strong> California, USA
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="clear" />
-      </div>
-    </div>
-  );
-};
