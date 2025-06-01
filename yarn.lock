@@ -1874,11 +1874,6 @@ css-color-keywords@^1.0.0:
   resolved "https://registry.yarnpkg.com/css-color-keywords/-/css-color-keywords-1.0.0.tgz#fea2616dc676b2962686b3af8dbdbe180b244e05"
   integrity sha512-FyyrDHZKEjXDpNJYvVsV960FiqQyXc/LlYmsxl2BcdMb2WPx0OGRVgTg55rPSyLSNMqP52R9r8geSp7apN3Ofg==
 
-css-mediaquery@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/css-mediaquery/-/css-mediaquery-0.1.2.tgz#6a2c37344928618631c54bd33cedd301da18bea0"
-  integrity sha512-COtn4EROW5dBGlE/4PiKnh6rZpAPxDeFLaEEwt4i10jpDMFt2EhQGS79QmmrO+iKCHv0PU/HrOWEhijFd1x99Q==
-
 css-to-react-native@3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/css-to-react-native/-/css-to-react-native-3.2.0.tgz#cdd8099f71024e149e4f6fe17a7d46ecd55f1e32"
@@ -2785,11 +2780,6 @@ hasown@^2.0.2:
   dependencies:
     function-bind "^1.1.2"
 
-hyphenate-style-name@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/hyphenate-style-name/-/hyphenate-style-name-1.1.0.tgz#1797bf50369588b47b72ca6d5e65374607cf4436"
-  integrity sha512-WDC/ui2VVRrz3jOVi+XtjqkDjiVjTtFaAGiW37k6b+ohyQ5wYDOGkvCZa8+H0nx3gyvv0+BST9xuOgIyGQ00gw==
-
 ignore@^5.1.1, ignore@^5.2.0:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.3.2.tgz#3cd40e729f3643fd87cb04e50bf0eb722bc596f5"
@@ -3286,13 +3276,6 @@ masonry-layout@^4.1.0:
     get-size "^2.0.2"
     outlayer "^2.1.0"
 
-matchmediaquery@^0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/matchmediaquery/-/matchmediaquery-0.4.2.tgz#22582bd4ae63ad9f54c53001bba80cbed0f7eafa"
-  integrity sha512-wrZpoT50ehYOudhDjt/YvUJc6eUzcdFPdmbizfgvswCKNHD1/OBOHYJpHie+HXpu6bSkEGieFMYk6VuutaiRfA==
-  dependencies:
-    css-mediaquery "^0.1.2"
-
 math-intrinsics@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/math-intrinsics/-/math-intrinsics-1.1.0.tgz#a0dd74be81e2aa5c2f27e65ce283605ee4e2b7f9"
@@ -3621,7 +3604,7 @@ prelude-ls@^1.2.1:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prop-types@^15.6.1, prop-types@^15.8.1:
+prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -3657,16 +3640,6 @@ react-is@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
-
-react-responsive@^10.0.1:
-  version "10.0.1"
-  resolved "https://registry.yarnpkg.com/react-responsive/-/react-responsive-10.0.1.tgz#293d4d2562da93409861216f0110d146c5676eb3"
-  integrity sha512-OM5/cRvbtUWEX8le8RCT8scA8y2OPtb0Q/IViEyCEM5FBN8lRrkUOZnu87I88A6njxDldvxG+rLBxWiA7/UM9g==
-  dependencies:
-    hyphenate-style-name "^1.0.0"
-    matchmediaquery "^0.4.2"
-    prop-types "^15.6.1"
-    shallow-equal "^3.1.0"
 
 react@18.3.1:
   version "18.3.1"
@@ -3864,11 +3837,6 @@ set-proto@^1.0.0:
     dunder-proto "^1.0.1"
     es-errors "^1.3.0"
     es-object-atoms "^1.0.0"
-
-shallow-equal@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/shallow-equal/-/shallow-equal-3.1.0.tgz#e7a54bac629c7f248eff6c2f5b63122ba4320bec"
-  integrity sha512-pfVOw8QZIXpMbhBWvzBISicvToTiM5WBF1EeAUZDDSb5Dt29yl4AYbyywbJFSEsRUMr7gJaxqCdr4L3tQf9wVg==
 
 shallowequal@1.1.0:
   version "1.1.0"
@@ -4223,9 +4191,9 @@ tsutils@^3.21.0:
     tslib "^1.8.1"
 
 tw-animate-css@^1.3.2:
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/tw-animate-css/-/tw-animate-css-1.3.2.tgz#5ddede70a66f7aefc7844b9960b12aaf073eeffe"
-  integrity sha512-khGYcg4sHWFWcjpiWvy0KN0Bd6yVy6Ecc4r9ZP2u7FV+n4/Fp8MQscCWJkM0KMIRvrpGyKpIQnIbEd1hrewdeg==
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/tw-animate-css/-/tw-animate-css-1.3.3.tgz#b210547886a5c414f89791ace943a33602613c85"
+  integrity sha512-tXE2TRWrskc4TU3RDd7T8n8Np/wCfoeH9gz22c7PzYqNPQ9FBGFbWWzwL0JyHcFp+jHozmF76tbHfPAx22ua2Q==
 
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"
