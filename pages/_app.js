@@ -5,11 +5,12 @@ import PreLoader from "../src/layout/PreLoader";
 import "../styles/globals.css";
 import * as gtag from '../lib/gtag';
 import {useEffect} from "react";
-import { router } from "next/client";
+import { useRouter } from 'next/router';
 import {GA_MEASUREMENT_ID} from "../lib/gtag";
 
 
 function MyApp({ Component, pageProps }) {
+    const router = useRouter();
 
     useEffect(() => {
         const handleRouteChange = (url) => {
