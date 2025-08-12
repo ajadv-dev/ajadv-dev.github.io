@@ -844,8 +844,8 @@ input[type="file"] {
 	}
 	.card-started .profile.no-photo .slide {
 		height: 55%;
-		background-position: 47% 30%;
-		background-size: 180%;
+		/*background-position: 47% 30%;*/
+		/*background-size: 180%;*/
 	}
 	.card-started .profile.no-photo .title {
 		margin-top: 200px;

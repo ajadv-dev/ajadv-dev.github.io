@@ -132,7 +132,7 @@ const IndexDark = () => {
         <div className="profile no-photo">
           <div
             className="slide"
-            style={{ backgroundImage: "url(images/avatar-aj1.jpg)" }}
+            style={{ backgroundImage: "url(images/avatar-aj3.jpg)" }}
           />
           <div className="title">Abhijeet Jadhav</div>
           <TypingAnimation />
