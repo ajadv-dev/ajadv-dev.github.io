@@ -13,9 +13,9 @@ const AboutMe = ({ bio }) => {
           <div className="col col-d-12 col-t-12 col-m-12 border-line-v">
             <section className="text-box">
               <p>A passionate Full Stack Web Developer & Design Technologist based in Krakow, Poland,
-                building scalable, high-performance applications with <span className="font-bold">React, Vue, Angular & TypeScript</span>.
+                building scalable, high-performance applications with <span className="font-bold">React, Vue, Angular & NodeJs, TypeScript, Java</span>.
               </p><br></br>
-            <p>I specialize in transforming design into code, architecting micro-frontends,
+            <p>I specialize in transforming design into code, architecting micro-frontends and micro-services,
                 and crafting enterprise-grade UI systems across diverse domains like Finance, e-Learning, Entertainment,
               and Communication.</p><br></br>
          <p>I bridge design and engineering, lead cross-functional teams,

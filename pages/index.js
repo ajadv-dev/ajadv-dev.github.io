@@ -35,7 +35,7 @@ const RecentWorks = dynamic(
 const bio = `<p>A passionate Full Stack Web Developer & Design Technologist based in Krakow, Poland,
 bringing over 10 years of experience building scalable, high-performance applications with React, Vue, and Angular.
 
-<br>I specialize in transforming design into code, architecting micro-frontends,
+<br>I specialize in transforming design into code, architecting micro-frontends and microservices,
 and crafting enterprise-grade UI systems across diverse domains like Finance, e-Learning, Entertainment, and Communication.</br>
 
 <br>I bridge design and engineering, lead cross-functional teams,
@@ -146,7 +146,7 @@ const IndexDark = () => {
           </div>
           {/* profile buttons */}
           <div className="lnks">
-            <a href="pdf/abhijeet-jadhav-cv.pdf" download={'abhijeet-jadhav-cv.pdf'} className="lnk">
+            <a href="pdf/abhijeet-jadhav-fullstack-cv.pdf" download={'abhijeet-jadhav-fullstack-cv.pdf'} className="lnk">
               <span className="text">Download CV</span>
               <span class="ion ion-ios-cloud-download"></span>
             </a>
