@@ -146,7 +146,7 @@ const IndexDark = () => {
           </div>
           {/* profile buttons */}
           <div className="lnks">
-            <a href="pdf/abhijeet-jadhav-fullstack-cv.pdf" download={'abhijeet-jadhav-fullstack-cv.pdf'} className="lnk">
+            <a href="pdf/abhijeet-jadhav-cv.pdf" download={'abhijeet-jadhav-cv.pdf'} className="lnk">
               <span className="text">Download CV</span>
               <span class="ion ion-ios-cloud-download"></span>
             </a>
