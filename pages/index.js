@@ -57,7 +57,7 @@ const resumeSectionData = {
     },
       {
       date: 'Feb 2020 - Jul 2022',
-      name: 'Senior Design Technologist II',
+      name: 'Senior Design Technologist',
       company: 'frog designs Inc',
       active: false,
       description: 'Led UI development, built dynamic apps, ensured quality, and supported team through agile collaboration.'
