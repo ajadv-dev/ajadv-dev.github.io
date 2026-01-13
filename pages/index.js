@@ -50,14 +50,14 @@ const resumeSectionData = {
   resumeData: [
     {
       date: 'Aug 2022 - Present',
-      name: 'Software Engineer',
+      name: 'Senior Software Engineer',
       company: 'Vonage (Part of Ericsson)',
       active: true,
       description: 'Built scalable micro-frontends, led UI development, ensured quality, and streamlined CI/CD pipelines.'
     },
       {
       date: 'Feb 2020 - Jul 2022',
-      name: 'Design Technologist II',
+      name: 'Senior Design Technologist II',
       company: 'frog designs Inc',
       active: false,
       description: 'Led UI development, built dynamic apps, ensured quality, and supported team through agile collaboration.'
